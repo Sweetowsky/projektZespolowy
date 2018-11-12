@@ -1,6 +1,8 @@
 body
 {	
-	background-color: #003366;
+	
+	background-color: #403d3c;
+	color: #1c1919 ;
 	font-family: 'Lato', sans-serif;
 }
 
@@ -16,7 +18,7 @@ body
 {	
 	background-color: #CC9900;
 	margin-top: 0px;
-	color: #ffffff;
+	color: #1c1919 ;
 	padding: 2px;
     text-decoration-color: aqua;
 	
@@ -28,9 +30,9 @@ body
 
 #menu
 {	
-	background-color: #CC9900 !important;
+	background-color: #eb5937 !important;
 	margin-top: 0px;
-	color: #ffffff;
+	color: #1c1919;
 	padding: 2px;
 	
 }
@@ -155,7 +157,7 @@ min-height:30rem;
 
 #footer
 {		
-	background-color:#003366;
+	background-color:#eb5937;
 	clear: both;
 	color: white;
 	text-align: center;

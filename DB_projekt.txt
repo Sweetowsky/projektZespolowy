@@ -1,0 +1,61 @@
+create sequence licznik increment by 1 start with 1;
+
+CREATE TABLE Uzytkownik(
+id NUMBER CONSTRAINT LOG_ID PRIMARY KEY,
+login varchar2(15) not null unique,
+haslo varchar2(10) not null unique,
+imie varchar2(20) not null,
+nazwisko varchar2(25) not null,
+e_mail varchar2(20) not null,
+tryb NUMBER NOT NULL CONSTRAINT tryb_check CHECK(tryb =1 or tryb =2)
+);
+
+CREATE TABLE Post(
+id NUMBER CONSTRAINT POST_ID PRIMARY KEY,
+temat varchar2(50) not null,
+opis varchar2(100),
+data_rozpoczecia DATE not null,
+data_zakonczenia DATE
+);
+
+CREATE TABLE Komentarz(
+id NUMBER CONSTRAINT POST_UZY_ID PRIMARY KEY,
+data DATE not null,
+opis varchar2(100) not null,
+data_wstawienia DATE not null,
+id_uzytkownika NUMBER not null CONSTRAINT ref_uzytkownik REFERENCES Uzytkownik(id),
+id_postu NUMBER not null CONSTRAINT ref_post REFERENCES Post(id)
+);
+
+CREATE TABLE Ankieta(
+id NUMBER CONSTRAINT ANKIETA_ID PRIMARY KEY,
+temat varchar2(50) not null,
+pytanie varchar2(50),
+opis varchar2(100),
+data_rozpoczecia DATE not null,
+data_zakonczenia DATE
+);
+
+CREATE TABLE Odpowiedz(
+id NUMBER CONSTRAINT ODP_ID PRIMARY KEY,
+odpowiedz varchar2(100) not null,
+id_ankiety NUMBER not null CONSTRAINT odp_ank REFERENCES Ankieta(id)
+);
+
+CREATE TABLE Glos(
+id NUMBER CONSTRAINT Glos_ID PRIMARY KEY,
+id_uzytkownika number not null constraint Glos_Uzytkownik REFERENCES Uzytkownik(id),
+id_ankieta number not null constraint Glos_Ankieta REFERENCES Ankieta(id),
+id_odpowiedz number constraint Glos_Odpowiedz REFERENCES Odpowiedz(id),
+data_glosowania Date
+);
+
+alter table Uzytkownik add constraint login_dlugosc check(length(login)>0);
+alter table Uzytkownk  add constraint haslo_dlugosc check(length(haslo)>0);
+
+
+alter table Post modify (data_rozpoczecia default sysdate);
+alter table Glos modify (data_glosowania default sysdate);
+alter table Ankieta modify (data_rozpoczecia default sysdate);
+alter table Komentarz modify (data_wstawienia default sysdate);
+

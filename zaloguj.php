@@ -2,7 +2,7 @@
 <?php
  
     session_start();
-     
+    
     if ((!isset($_POST['login'])) || (!isset($_POST['haslo'])))
     {
         header('Location: logowanie.php');
@@ -39,12 +39,19 @@
                 if(password_verify($haslo,$wiersz['haslo']))
                 {
                     $_SESSION['zalogowany'] = true;
+                    
+                    
                  
 
                     $_SESSION['login'] = $wiersz['login'];
                     $_SESSION['id_delikwenta'] = $wiersz['id'];
                     $_SESSION['imie']=$wiersz['imie'];
                     $_SESSION['nazwisko']=$wiersz['nazwisko'];
+                    
+                    if($_SESSION['login'] =='admin')
+                    {
+                        $_SESSION['zalogowanyAdmin'] = true;
+                    }
 
 
                     unset($_SESSION['blad']);

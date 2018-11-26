@@ -16,7 +16,7 @@
     <div id="container">
 	
 		<div id="logo">
-			<img src="img/baner1.jpg" alt="sklep" />
+			<img src="img/baner1.png" alt="sklep" />
 		</div>
         <?php
  
@@ -29,8 +29,8 @@
 			
             <a href="forum.php"><div class="option"> Forum </div></a>
 		    
-			<a href="rejestracja.php"><div class="option">Rejestracja</div></a>
-			<a href="logowanie.php"><div class="option">Logowanie</div></a>
+			<a href="rejestracja.php"><div class="option"><img src="img/reg.png"/></div></a>
+			<a href="logowanie.php"><div class="option"><img src="img/log.png"/></div></a>
 			
 			<div style="clear:both;"></div>
 		</div>
@@ -44,7 +44,7 @@
            
 		    
 		
-			<a href="logowanie.php"><div class="option">Logowanie</div></a>
+			<a href="logowanie.php"><div class="option"><img src="img/log.png"/></div></a>
 			
 			<div style="clear:both;"></div>
 		</div>
@@ -58,7 +58,7 @@
             <a href="forum.php"><div class="option"> Forum </div></a>
 		    
 			
-			<a href="logowanie.php"><div class="option">Logowanie</div></a>
+			<a href="logowanie.php"><div class="option"><img src="img/log.png"/></div></a>
 			
 			<div style="clear:both;"></div>
 		</div>

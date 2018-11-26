@@ -1,6 +1,7 @@
 body
 {	
-	
+	background-image: url("img/backg.png");
+    background-repeat: repeat;
 	background-color: #403d3c;
 	color: #1c1919 ;
 	font-family: 'Lato', sans-serif;
@@ -208,7 +209,7 @@ min-height:30rem;
 	float: left;
 	min-width: 91px;
 	height: 25px;
-	color:white;
+	color:white;	
 	font-size: 18px;
 	padding: 10px;
 	border-right: 2px solid #444444;
@@ -264,9 +265,9 @@ color:black;
 }
 .option:hover
 {
-	background-color: #000000;
+	background-color: #1c1919;
 	cursor: pointer;
-	color: #CC9900;
+	color: white;
 }
 .options:hover
 {

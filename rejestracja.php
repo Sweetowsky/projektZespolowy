@@ -116,7 +116,7 @@
                 {
                     //Hurra, wszystkie testy zaliczone, dodajemy usera do bazy
                      
-                    if ($polaczenie->query("INSERT INTO logowanie VALUES (NULL, '$login','$haslo_hash',NULL,'$imie','$nazwisko')"))
+                    if ($polaczenie->query("INSERT INTO logowanie VALUES (NULL, '$login','$haslo_hash','$imie','$nazwisko','$email',NULL)"))
                     {
                         $_SESSION['udanarejestracja']=true;
                         header('Location: witamy.php');

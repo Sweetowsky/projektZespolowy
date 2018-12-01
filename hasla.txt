@@ -1,0 +1,9 @@
+Najpierw import bazy 
+W przegladarce localhost/phpmyadmin
+tworzymy baze o nazwie forum 
+klikamy import i wybieramy plik forum.sql
+
+
+
+ADMIN: login admin   has³o admin
+USER: login user1  has³o user1

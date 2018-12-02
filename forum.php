@@ -6,6 +6,8 @@
     {
 $_SESSION['temat'] = $_POST['temat'];
 $_SESSION['opis'] = $_POST['opis'];
+$_SESSION['czas'] = $_POST['czas'];
+$_SESSION['id'] = $_POST['id'];
 
  }
       
@@ -54,7 +56,10 @@ $_SESSION['opis'] = $_POST['opis'];
             <h5><?php echo $row['temat']."<br>".$row['opis']."<br> DATA ROZPOCZECIA: ".$row['data_rozpoczecia']."<br> ID AUTORA: ".$row['id_tworcy']?> </h5>
             <br>
             <input type="hidden" name="temat" value="<?php echo $row["temat"]; ?>" />
-            <input type="hidden" name="opis" value="<?php echo $row["opis"]; ?>" /> 
+            <input type="hidden" name="opis" value="<?php echo $row["opis"]; ?>" />
+            <input type="hidden" name="czas" value="<?php echo $row["data_rozpoczecia"]; ?>" />
+            <input type="hidden" name="id" value="<?php echo $row["id_tworcy"]; ?>" />
+            
          
                 <input class="button_send" type="submit" value="Zobacz" />
 
@@ -67,17 +72,6 @@ $_SESSION['opis'] = $_POST['opis'];
               
 </div>
 
-
-
-
-
-    Zróbcie te 2 divy jakoś żeby to wyglądało ( .rodzic i .post ) <br>
-    
-    Zamiast id autora docelowo będzię oczywiście jego login lub imie i nazwisko ;) <br>
-    
-    Aby wejść do postu zrobione będzie hiperłącze na tym divie post gdzie bedzie otwierana podstrona z tym postem i komentarzami <br>
-
-    Dodawanie posta tez trzeba bedzie gdzies dodać <br>
 
 <?php include('stopka.php'); ?>
 

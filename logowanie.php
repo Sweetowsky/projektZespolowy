@@ -36,7 +36,7 @@
 			
 			
 			<tr align="left">
-				<th><input name="zaloguj" type="submit" value="Zaloguj"></th>
+				<th><input class="button_send" name="zaloguj" type="submit" value="Zaloguj"></th>
 				
 			
 		</table>

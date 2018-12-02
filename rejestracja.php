@@ -145,7 +145,7 @@
 
 <?php include('naglowek.php'); ?>
 
- <span class="bigtitle" >Rejestracja </span>
+ <span class="bigtitle" >REJESTRACJA </span>
     <form method="post">
         <fieldset>
 		<legend align="center">Rejestracja</legend>
@@ -288,7 +288,7 @@
             </tr>
              <tr align="left">
                  <th>
-        <input type="submit" value="Zarejestruj się" />
+        <input class="button_send" type="submit" value="Zarejestruj się" />
                      </th>
             </tr>
             </table>

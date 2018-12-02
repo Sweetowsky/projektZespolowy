@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 01 Gru 2018, 15:57
+-- Czas generowania: 02 Gru 2018, 18:33
 -- Wersja serwera: 10.1.31-MariaDB
 -- Wersja PHP: 7.2.3
 
@@ -87,7 +87,7 @@ CREATE TABLE `post` (
   `id_post` int(8) NOT NULL,
   `temat` varchar(30) COLLATE utf8mb4_polish_ci DEFAULT NULL,
   `opis` text CHARACTER SET utf8 COLLATE utf8_polish_ci,
-  `data_rozpoczecia` date DEFAULT NULL,
+  `data_rozpoczecia` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `data_zakoczenia` date DEFAULT NULL,
   `id_tworcy` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
@@ -97,8 +97,12 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id_post`, `temat`, `opis`, `data_rozpoczecia`, `data_zakoczenia`, `id_tworcy`) VALUES
-(1, 'Pierwszy testowy post', 'To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. ', '2018-12-01', NULL, 3),
-(2, 'Drugi temat', 'bla bla bla bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla', '2018-12-01', NULL, 3);
+(1, 'Pierwszy testowy post', 'To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. ', '2018-11-30 23:00:00', NULL, 3),
+(2, 'Drugi temat', 'bla bla bla bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla', '2018-11-30 23:00:00', NULL, 3),
+(3, 'Budowa placu zabaw', 'Witam wszystkich. Zapraszam do dyskusji w sprawie budowy placu zabaw na naszym osiedlu', '2018-12-01 23:00:00', NULL, 4),
+(4, 'Pierwszy post', 'Witam na nowym forum mieszkańców osiedla gdzie będziemy poruszać dyskusje na różne tematy dotyczące osiedla.', '2018-12-02 15:32:29', NULL, 4),
+(5, 'No siema', 'opis opis opis', '2018-12-02 15:32:29', NULL, 4),
+(6, 'No siema', 'jhgkkjhgjhk', '2018-12-02 15:32:35', NULL, 4);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -155,7 +159,7 @@ ALTER TABLE `logowanie`
 -- AUTO_INCREMENT dla tabeli `post`
 --
 ALTER TABLE `post`
-  MODIFY `id_post` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_post` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Ograniczenia dla zrzutów tabel

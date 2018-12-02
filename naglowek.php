@@ -27,11 +27,11 @@
          ?>
        	<div id="menu" >
 			
-            <a href="forum.php"><div class="option"> Forum </div></a>
-<a href="dodajpost.php"><div class="option">Dodaj Post</div></a>
+            <a href="forum.php"><div class="option">FORUM</div></a>
+            <a href="dodajpost.php"><div class="option">DODAJ POST</div></a>
 		    
-			<a href="rejestracja.php"><div class="option"><img src="img/reg.png"/></div></a>
-			<a href="logowanie.php"><div class="option"><img src="img/log.png"/></div></a>
+			<a href="rejestracja.php"><div class="option">REJESTRACJA</div></a>
+			<a href="logowanie.php"><div class="option">MOJE KONTO</div></a>
 			
 			<div style="clear:both;"></div>
 		</div>
@@ -45,7 +45,7 @@
            
 		    
 		
-			<a href="logowanie.php"><div class="option"><img src="img/log.png"/></div></a>
+			<a href="logowanie.php"><div class="option">LOGOWANIE</div></a>
 			
 			<div style="clear:both;"></div>
 		</div>
@@ -56,11 +56,11 @@
          ?>
        	<div id="menu" >
 			
-            <a href="forum.php"><div class="option"> Forum </div></a>
+            <a href="forum.php"><div class="option">FORUM</div></a>
 		    
-<a href="dodajpost.php"><div class="option">Dodaj Post</div></a>
+<a href="dodajpost.php"><div class="option">DODAJ POST</div></a>
 
-			<a href="logowanie.php"><div class="option"><img src="img/log.png"/></div></a>
+			<a href="logowanie.php"><div class="option">MOJE KONTO</div></a>
 			
 			<div style="clear:both;"></div>
 		</div>

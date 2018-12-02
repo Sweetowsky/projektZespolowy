@@ -3,7 +3,7 @@
  
     session_start();
      
-    if (isset($_POST['email']))
+    if (isset($_POST['temat']))
     {
         //Udana walidacja? Załóżmy, że tak!
         $wszystko_OK=true;
@@ -12,6 +12,7 @@
         //deklaracja
         $temat = $_POST['temat'];
         $opis = $_POST['opis'];
+        $id_tworcy= $_SESSION['id_delikwenta'];
        
          
       
@@ -44,7 +45,7 @@
                 {
                     //Hurra, wszystkie testy zaliczone, dodajemy do bazy
                      
-                    if ($polaczenie->query("INSERT INTO post VALUES (NULL, '$temat','$opis',NULL,NULL,NULL)"))
+                    if ($polaczenie->query("INSERT INTO post VALUES (NULL, '$temat','$opis',NULL,NULL,'$id_tworcy')"))
                     {
                         $_SESSION['udanarejestracja']=true;
                         header('Location: forum.php');
@@ -73,7 +74,7 @@
 
 <?php include('naglowek.php'); ?>
 
- <span class="bigtitle" >Dodawanie postu </span>
+ <span class="bigtitle" >DODAWANIE POSTU </span>
     <form method="post">
         <fieldset>
 		<legend align="center">Dodaj post</legend>
@@ -99,7 +100,7 @@
             
                <tr align="left"><th>Opis</th>
                    <th>
-            <input type="text" value="<?php
+            <input  type="text" value="<?php
             if (isset($_SESSION['fr_opis']))
             {
                 echo $_SESSION['fr_opis'];
@@ -129,7 +130,7 @@
            
              <tr align="left">
                  <th>
-        <input type="submit" value="Dodaj post" />
+        <input class="button_send" type="submit" value="Dodaj post" />
                      </th>
             </tr>
             </table>

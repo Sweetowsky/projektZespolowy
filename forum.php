@@ -1,6 +1,15 @@
 <?php
  
     session_start();
+
+ if (isset($_POST['temat']))
+    {
+$_SESSION['temat'] = $_POST['temat'];
+$_SESSION['opis'] = $_POST['opis'];
+
+ }
+      
+      
      
     if (!isset($_SESSION['zalogowany']))
     {
@@ -19,6 +28,13 @@
 <?php
  $query = "SELECT * FROM post ";
 
+ if(isset($_GET["action"]))  
+ {  
+ 
+   header('Location: post.php');
+     
+ }  
+
 ?>
 
 <div class="rodzic">
@@ -35,10 +51,13 @@
             
         
             
-            <h5><?php echo $row['temat']."|||| ".$row['opis']."|||| DATA ROZPOCZECIA:".$row['data_rozpoczecia']."|||| ID AUTORA: ".$row['id_tworcy']?></h5>
+            <h5><?php echo $row['temat']."<br>".$row['opis']."<br> DATA ROZPOCZECIA: ".$row['data_rozpoczecia']."<br> ID AUTORA: ".$row['id_tworcy']?> </h5>
             <br>
+            <input type="hidden" name="temat" value="<?php echo $row["temat"]; ?>" />
+            <input type="hidden" name="opis" value="<?php echo $row["opis"]; ?>" /> 
          
-     
+                <input class="button_send" type="submit" value="Zobacz" />
+
         </form>  
     </div>  
         <?php  
@@ -47,6 +66,11 @@
     ?>  
               
 </div>
+
+
+
+
+
     Zróbcie te 2 divy jakoś żeby to wyglądało ( .rodzic i .post ) <br>
     
     Zamiast id autora docelowo będzię oczywiście jego login lub imie i nazwisko ;) <br>

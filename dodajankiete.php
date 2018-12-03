@@ -4,7 +4,7 @@
 ?>
 
 <?php include('naglowek.php'); ?>
-To niezłe ankiety
+Dodawanie ankiet
 
  
 <?php include('stopka.php'); ?>

@@ -1,6 +1,6 @@
 Najpierw import bazy 
 W przegladarce localhost/phpmyadmin
-tworzymy baze o nazwie forum 
+tworzymy baze o nazwie forum1 
 klikamy import i wybieramy plik forum.sql
 
 

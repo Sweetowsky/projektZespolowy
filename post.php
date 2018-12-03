@@ -23,8 +23,8 @@ $id_post=$_SESSION['id_post'];
 <?php include('naglowek.php'); ?>
 
 <?php
- //$query = "SELECT * FROM post ";
-$query="Select * from komentarz where id_postu='$id_post'";
+ $query = "Select k.id_komentarz, k.opis,k.data_wstawienia,k.id_uzytkownika,k.id_postu, l.imie, l.nazwisko from komentarz k join logowanie l On(k.id_uzytkownika= l.id) where id_postu='$id_post'";
+//$query="Select * from komentarz where id_postu='$id_post'";
 
 
 
@@ -52,7 +52,7 @@ $query="Select * from komentarz where id_postu='$id_post'";
             ?>
             <div id="kreska"> -------------------------------------------------------------------------------------------------</div>
 <br>
-            <div id= "imie"><?php    echo $_SESSION['imie']." ".$_SESSION['nazwisko']  ?></div>
+            <div id= "imie"><?php    echo $row['imie']." ".$row['nazwisko'] ?></div>
             <div id= "czas"> <?php echo $row['data_wstawienia']?></div>
 <br>
             <div id="komentarz"> <?php echo $row['opis']?>  </div>

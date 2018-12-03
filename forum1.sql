@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 03 Gru 2018, 18:52
+-- Czas generowania: 03 Gru 2018, 19:24
 -- Wersja serwera: 10.1.31-MariaDB
 -- Wersja PHP: 7.2.3
 
@@ -74,7 +74,9 @@ CREATE TABLE `komentarz` (
 INSERT INTO `komentarz` (`id_komentarz`, `opis`, `data_wstawienia`, `id_uzytkownika`, `id_postu`) VALUES
 (1, 'Witam Witam', '2018-12-03 16:43:24', 4, 1),
 (2, 'Dzień Dobry ', '2018-12-03 16:58:13', 3, 1),
-(3, 'To jest komentarz', '2018-12-03 17:47:42', 3, 1);
+(3, 'To jest komentarz', '2018-12-03 17:47:42', 3, 1),
+(4, 'Jestem za ', '2018-12-03 18:01:36', 3, 5),
+(5, 'To wspaniały pomysł', '2018-12-03 18:02:44', 3, 5);
 
 -- --------------------------------------------------------
 
@@ -135,7 +137,9 @@ INSERT INTO `post` (`id_post`, `temat`, `opis`, `data_rozpoczecia`, `data_zakocz
 (1, 'Pierwszy testowy post', 'To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. To jest przykładowy opis. ', '2018-11-30 23:00:00', NULL, 3),
 (2, 'Drugi temat', 'bla bla bla bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla', '2018-11-30 23:00:00', NULL, 3),
 (3, 'jakistakitemat', 'jakistakiopis', '0000-00-00 00:00:00', NULL, 3),
-(4, 'testowytemacik', 'jakiestakitemacik', '2018-12-02 18:51:21', NULL, 3);
+(4, 'testowytemacik', 'jakiestakitemacik', '2018-12-02 18:51:21', NULL, 3),
+(5, 'Budowa placu zabaw', 'Zapraszam do dyskusji w sprawie budowy placu zabaw na naszym osiedlu.', '2018-12-03 18:01:07', NULL, 4),
+(6, 'Nowy temat', 'nowy', '2018-12-03 18:02:21', NULL, 3);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -205,7 +209,7 @@ ALTER TABLE `glos`
 -- AUTO_INCREMENT dla tabeli `komentarz`
 --
 ALTER TABLE `komentarz`
-  MODIFY `id_komentarz` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_komentarz` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT dla tabeli `logowanie`
@@ -223,7 +227,7 @@ ALTER TABLE `odpowiedz`
 -- AUTO_INCREMENT dla tabeli `post`
 --
 ALTER TABLE `post`
-  MODIFY `id_post` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_post` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Ograniczenia dla zrzutów tabel

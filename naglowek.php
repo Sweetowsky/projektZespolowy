@@ -29,9 +29,10 @@
 			
             <a href="forum.php"><div class="option">FORUM</div></a>
             <a href="dodajpost.php"><div class="option">DODAJ POST</div></a>
-		    
+		    <a href="ankiety.php"><div class="option">ANKIETY</div></a>
+            <a href="dodajankiete.php"><div class="option">DODAJ ANKIETE</div></a>
 			<a href="rejestracja.php"><div class="option">REJESTRACJA</div></a>
-			<a href="logowanie.php"><div class="option">MOJE KONTO</div></a>
+			<a href="logowanie.php"><div class="option">KONTO</div></a>
 			
 			<div style="clear:both;"></div>
 		</div>
@@ -57,10 +58,10 @@
        	<div id="menu" >
 			
             <a href="forum.php"><div class="option">FORUM</div></a>
-		    
-<a href="dodajpost.php"><div class="option">DODAJ POST</div></a>
-
-			<a href="logowanie.php"><div class="option">MOJE KONTO</div></a>
+		    <a href="dodajpost.php"><div class="option">DODAJ POST</div></a>
+            <a href="ankiety.php"><div class="option">ANKIETY</div></a>
+            <a href="dodajankiete.php"><div class="option">DODAJ ANKIETE</div></a>
+            <a href="logowanie.php"><div class="option">KONTO</div></a>
 			
 			<div style="clear:both;"></div>
 		</div>

@@ -6,7 +6,7 @@
 
 
 // usuwanie wszystkich zmiennych z $_SESSION
-//$_SESSION = array();
+$_SESSION = array();
 
 
      

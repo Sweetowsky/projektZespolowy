@@ -8,6 +8,10 @@ $_SESSION['temat'] = $_POST['temat'];
 $_SESSION['opis'] = $_POST['opis'];
 $_SESSION['czas'] = $_POST['czas'];
 $_SESSION['id'] = $_POST['id'];
+$_SESSION['id_post'] = $_POST['id_post'];
+$_SESSION['imie'] = $_POST['imie'];
+$_SESSION['nazwisko'] = $_POST['nazwisko'];
+
 
  }
       
@@ -28,7 +32,8 @@ $_SESSION['id'] = $_POST['id'];
 
   
 <?php
- $query = "SELECT * FROM post ";
+ //$query = "SELECT * FROM post ";
+$query="Select p.id_post,p.temat,p.opis,p.data_rozpoczecia, l.imie,l.nazwisko from post p join logowanie l On(p. id_tworcy = l. id)";
 
  if(isset($_GET["action"]))  
  {  
@@ -53,12 +58,15 @@ $_SESSION['id'] = $_POST['id'];
             
         
             
-            <h5><?php echo $row['temat']."<br>".$row['opis']."<br> DATA ROZPOCZECIA: ".$row['data_rozpoczecia']."<br> ID AUTORA: ".$row['id_tworcy']?> </h5>
+            <h5><?php echo $row['temat']."<br>".$row['opis']."<br> DATA ROZPOCZECIA: ".$row['data_rozpoczecia']."<br> AUTOR: ".$row['imie']." ".$row['nazwisko']?> </h5>
             <br>
             <input type="hidden" name="temat" value="<?php echo $row["temat"]; ?>" />
             <input type="hidden" name="opis" value="<?php echo $row["opis"]; ?>" />
             <input type="hidden" name="czas" value="<?php echo $row["data_rozpoczecia"]; ?>" />
             <input type="hidden" name="id" value="<?php echo $row["id_tworcy"]; ?>" />
+            <input type="hidden" name="id_post" value="<?php echo $row["id_post"]; ?>" />
+            <input type="hidden" name="imie" value="<?php echo $row["imie"]; ?>" />
+            <input type="hidden" name="nazwisko" value="<?php echo $row["nazwisko"]; ?>" />
             
          
                 <input class="button_send" type="submit" value="Zobacz" />

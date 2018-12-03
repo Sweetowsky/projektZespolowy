@@ -18,11 +18,8 @@
 <?php
  
     echo "<p>Witaj ".$_SESSION['imie']." ".$_SESSION['nazwisko'].'! [ <a href="logout.php">Wyloguj się!</a> ]</p>';
-   echo $_SESSION['login'];
-echo $_SESSION['imie'];
-echo $_SESSION['nazwisko'];
-echo $imie;
-echo $nazwisko;
+   echo "Login: ".$_SESSION['login'];
+
 
      
 ?>

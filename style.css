@@ -400,3 +400,34 @@ tr {
 #polecane2 {
     background-color: white;
 }
+
+#czas {
+    text-align: right;
+}
+
+#imie{
+    float:left;
+    
+}
+
+#opis {
+    
+}
+
+#temat {
+    font-size: 20pt;
+    color: coral;
+}
+
+div {
+    
+}
+
+#koniec {
+    clear:both;
+}
+
+#komentarz {
+    float: left;
+    font-size: 15pt;
+}

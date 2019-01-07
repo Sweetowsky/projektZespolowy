@@ -58,7 +58,7 @@ $query="Select p.id_post,p.temat,p.opis,p.data_rozpoczecia, l.imie,l.nazwisko fr
             
         
             
-            <h5><?php echo $row['temat']."<br>".$row['opis']."<br> DATA ROZPOCZECIA: ".$row['data_rozpoczecia']."<br> AUTOR: ".$row['imie']." ".$row['nazwisko']?> </h5>
+            <h5><?php echo "<font color=#eb5937 size='20' face='Caveat'>".$row['temat']."</font><br>".$row['opis']."<br> <b><font color=#eb5937>DATA ROZPOCZECIA:</font> </b> ".$row['data_rozpoczecia']."<br> <b><font color=#eb5937>AUTOR:</font> </b> ".$row['imie']." ".$row['nazwisko']?> </h5>
             <br>
             <input type="hidden" name="temat" value="<?php echo $row["temat"]; ?>" />
             <input type="hidden" name="opis" value="<?php echo $row["opis"]; ?>" />

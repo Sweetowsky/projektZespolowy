@@ -35,10 +35,10 @@ $id_post=$_SESSION['id_post'];
 
 <div id="czas">  <?php    echo $_SESSION['czas'];  ?>  </div>
 <br>
-<div id="temat"> <?php    echo $_SESSION['temat'];  ?>   </div>
+<div class="bigtitle" id="temat"> <?php    echo "<font color=#eb5937 size='20' face='Caveat'>".$_SESSION['temat']."</font>";  ?>   </div>
 <br>
 <div id="opis">  <?php    echo $_SESSION['opis'];?>   </div>
-
+<br><br>
 
 
 
@@ -48,17 +48,18 @@ $id_post=$_SESSION['id_post'];
         mysqli_query($connect, "SET NAMES 'utf8' COLLATE 'utf8_polish_ci'");
         if ($result = $connect->query($query)) {
             /* fetch associative array */
+			
             while ($row = $result->fetch_assoc()) {
             ?>
-            <div id="kreska"> -------------------------------------------------------------------------------------------------</div>
-<br>
-            <div id= "imie"><?php    echo $row['imie']." ".$row['nazwisko'] ?></div>
+			            
+<div class="comment"> 
+            <div id= "imie"><?php    echo "<font color=#eb5937>".$row['imie']." ".$row['nazwisko']."</font>" ?></div>
             <div id= "czas"> <?php echo $row['data_wstawienia']?></div>
-<br>
+
             <div id="komentarz"> <?php echo $row['opis']?>  </div>
-       
+       <br>
             
-          
+</div>          
             <div id = "koniec"></div>
             
 

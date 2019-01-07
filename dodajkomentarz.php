@@ -34,6 +34,10 @@
           
             $polaczenie = new mysqli($host, $db_user, $db_password, $db_name);
               $polaczenie->set_charset("utf8");
+            if($komentarz==null)
+            {
+                throw new Exception('Nie mozna wstawic pustego komentarza');
+            }
             if ($polaczenie->connect_errno!=0)
             {
                 throw new Exception(mysqli_connect_errno());

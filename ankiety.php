@@ -77,8 +77,18 @@ $query="Select a.id_ankieta,a.temat,a.pytanie,a.opis,a.data_rozpoczecia, a.data_
             <input type="hidden" name="opcjaC" value="<?php echo $row["opcjaC"]; ?>" />
             
                 <input class="button_send" type="submit" value="Zobacz" />
+            
+              
 
         </form>  
+        
+ 
+                        
+        
+        
+
+           
+
     </div>  
         <?php  
         }  

@@ -70,9 +70,19 @@ $query ="Select a.id_ankieta, a.temat,a.pytanie,a.opis,a.data_rozpoczecia,a.data
 
 <br>
 
-      
-      
-      
+       <?php
+
+
+    
+    
+    $time = strtotime($_SESSION['data_zakonczenia']);
+
+$curtime = time();
+
+if($curtime < $time) {    
+ // echo "data zakonczenia jest data pozniejsza niz obecna";
+    ?>
+
  <FORM METHOD="GET" ACTION="glosowanie.php">
 <TABLE>
   <TR>
@@ -103,7 +113,7 @@ $query ="Select a.id_ankieta, a.temat,a.pytanie,a.opis,a.data_rozpoczecia,a.data
           
           ?>
  
-  
+         
 </TABLE>
 <BR>
 <input class="button_send" type="submit" Name = "Submit1" value="Głosuj" />
@@ -111,7 +121,8 @@ $query ="Select a.id_ankieta, a.temat,a.pytanie,a.opis,a.data_rozpoczecia,a.data
 </FORM>     
         
 <br> 
-        <BR><BR>
+    
+          <BR><BR>
             
 <FORM NAME ="form2" METHOD ="GET" ACTION ="viewResults.php">
 
@@ -120,64 +131,43 @@ $query ="Select a.id_ankieta, a.temat,a.pytanie,a.opis,a.data_rozpoczecia,a.data
 </FORM>
     
     
-      
+    <?php
+}
+    else
+    {//echo "Ankieta zamknieta ";
+     
+     ?>
+    <center><h1>Ankieta została zakonczona</h1></center>
+    <center><h2>Wyniki</h2></center>
+    
+    
+    <?php
+    
+    include('viewResult2.php'); 
+    
+    }
 
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+?> 
+    <br> <br>
+    <?php
+    
+            if($_SESSION['id_delikwenta'] == 3)
+            {
+               // echo  $_SESSION['id_delikwenta'];
+                ?>
+                           
+<FORM NAME ="form3" METHOD ="GET" ACTION ="usunAnkiete.php">
 
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-            
-  
+<INPUT class="button_send" TYPE = "Submit" Name = "Submit3"  VALUE = "Usuń ankiete">
+ 
+
+</FORM> 
+                
+             <?php  
+            }
+          
+          ?>
+
       
 
 <form method="post" action="zobacz_ankieta.php?action=add&id=<?php echo $row["id_ankieta"]; ?>">  

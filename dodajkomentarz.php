@@ -79,7 +79,7 @@
 <?php include('naglowek.php'); ?>
 
  <span class="bigtitle" >DODAWANIE KOMENTARZA </span>
-    <form method="post">
+    <form method="post"  >
         <fieldset>
 		<legend align="center">Dodaj komentarz</legend>
 		<table align="center">

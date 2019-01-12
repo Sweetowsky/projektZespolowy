@@ -93,6 +93,26 @@ $id_post=$_SESSION['id_post'];
   
 
 
+    <?php
+    
+            if($_SESSION['id_delikwenta'] == 3)
+            {
+               // echo  $_SESSION['id_delikwenta'];
+                ?>
+                           
+<FORM NAME ="form3" METHOD ="GET" ACTION ="usunPost.php">
+
+<INPUT class="button_send" TYPE = "Submit" Name = "Submit3"  VALUE = "Usuń post">
+ 
+
+</FORM> 
+                
+             <?php  
+            }
+          
+          ?>
+
+
 
  
 <?php include('stopka.php'); ?>

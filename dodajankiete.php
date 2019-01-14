@@ -1,7 +1,7 @@
 <?php
  
     session_start();
-     
+     error_reporting(E_ALL ^ E_NOTICE);  
     if (isset($_POST['temat']))
     {
         //Udana walidacja? Załóżmy, że tak!
@@ -15,9 +15,19 @@
 		$data_rozpoczecia = $_POST['data_rozpoczecia'];
 		$data_zakonczenia = $_POST['data_zakonczenia'];
 		$widocznosc = 1;
-        $opcjaA =$_POST['name']['0'];
-        $opcjaB =$_POST['name']['1'];
-        $opcjaC =$_POST['name']['2'];
+		
+		//if($_POST['name']['0']!="")
+		//{
+			
+			
+		//}
+		
+		$opcjaA =$_POST['name']['0'];
+		$opcjaB =$_POST['name']['1'];
+		$opcjaC =$_POST['name']['2'];
+        
+        
+       
        // $opcjaC = $_POST['name']['2'];
         
         //$opcjaA= $_POST['name'];
@@ -189,18 +199,7 @@ echo $_POST['data_rozpoczecia'];
             
             
             
-            
-            
-     
-         
-        
-            
 
-            
-
-            
-          
-         
               
           
                 </tbody>

@@ -105,12 +105,12 @@ if (isset($_GET['Submit2']) && isset($_GET['h1'])) {
 <?php include('naglowek.php'); ?>
 
 <?PHP
-print $question . "<BR>";
-print $answerA . " " . $imgTagA . " " . $percentA . "% " . $qA . "<BR>";
-print $answerB . " " .$imgTagB . " " . $percentB . "% " . $qB . "<BR>";
+print "<center>".$question . "</center><BR>";
+print "<center>".$answerA . " " . $imgTagA . " " . $percentA . "% " . $qA . "</center><BR>";
+print "<center>".$answerB . " " .$imgTagB . " " . $percentB . "% " . $qB . "</center><BR>";
 if($_SESSION['opcjaC']!="")
 {
-    print $answerC . " " .$imgTagC . " " . $percentC . "% " . $qC . "<BR>";
+    print "<center>".$answerC . " " .$imgTagC . " " . $percentC . "% " . $qC . "</center><BR>";
 
     
 }

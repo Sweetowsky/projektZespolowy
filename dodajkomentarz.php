@@ -93,7 +93,7 @@
             
                <tr align="left"><th>Komentarz</th>
                    <th>
-            <input  type="text" value="<?php
+            <input  type="text" class="form-textbox" value="<?php
             if (isset($_SESSION['fr_komentarz']))
             {
                 echo $_SESSION['fr_komentarz'];

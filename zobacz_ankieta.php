@@ -58,11 +58,12 @@ $query ="Select a.id_ankieta, a.temat,a.pytanie,a.opis,a.data_rozpoczecia,a.data
 
 <div id="czas">  <?php    echo $_SESSION['data_rozpoczecia']." - ".$_SESSION['data_zakonczenia'];  ?>  </div>
 <br>
+<center>
 <div class="bigtitle" id="temat"> <?php    echo $_SESSION['temat'];  ?>   </div>
 <br>
 <div id="opis">  <?php    echo $_SESSION['opis'];?>   </div>
 <br>
-<div id="opis">  <?php    echo $_SESSION['pytanie'];?>   </div>
+<div id="opis">  <?php    echo $_SESSION['pytanie'];?>   </div></center>
 
 
 
@@ -82,7 +83,8 @@ $curtime = time();
 if($curtime < $time) {    
  // echo "data zakonczenia jest data pozniejsza niz obecna";
     ?>
-
+<div class="contener" >
+<center>
  <FORM METHOD="GET" ACTION="glosowanie.php">
 <TABLE>
   <TR>
@@ -115,7 +117,7 @@ if($curtime < $time) {
  
          
 </TABLE>
-<BR>
+<BR></center>
 <input class="button_send" type="submit" Name = "Submit1" value="Głosuj" />
 <INPUT TYPE = "Hidden" Name = "h1"  VALUE = <?PHP print $qID; ?>>
 </FORM>     
@@ -129,7 +131,9 @@ if($curtime < $time) {
 <INPUT class="button_send" TYPE = "Submit" Name = "Submit2"  VALUE = "Zobacz wyniki">
 <INPUT TYPE = "Hidden" Name = "h1"  VALUE = <?PHP print $qID; ?>>
 </FORM>
-    
+<br>
+<br>
+  </div>  
     
     <?php
 }
@@ -137,18 +141,20 @@ if($curtime < $time) {
     {//echo "Ankieta zamknieta ";
      
      ?>
-    <center><h1>Ankieta została zakonczona</h1></center>
-    <center><h2>Wyniki</h2></center>
-    
-    
+	 <div class="contener" >
+    <center><h1 class="bigtitle">Ankieta została zakonczona</h1></center>
+    <center><h2 class="bigtitle">Wyniki</h2></center>
+   
+    <center>
     <?php
     
     include('viewResult2.php'); 
     
     }
 
-?> 
+?>  </center></div>
     <br> <br>
+	
     <?php
     
             if($_SESSION['id_delikwenta'] == 3)
@@ -168,14 +174,14 @@ if($curtime < $time) {
           
           ?>
 
-      
+     
 
 <form method="post" action="zobacz_ankieta.php?action=add&id=<?php echo $row["id_ankieta"]; ?>">  
         
            <!-- <input class="button_send" type="submit" value="Głosuj" />-->
 
         </form>  
-  
+ 
 <?php include('stopka.php'); ?>
 
 

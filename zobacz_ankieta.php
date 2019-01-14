@@ -149,10 +149,12 @@ if($curtime < $time) {
     <?php
     
     include('viewResult2.php'); 
-    
+	?>
+    </center></div>
+	<?php
     }
 
-?>  </center></div>
+?>  
     <br> <br>
 	
     <?php
@@ -168,6 +170,8 @@ if($curtime < $time) {
  
 
 </FORM> 
+
+
                 
              <?php  
             }
@@ -176,11 +180,7 @@ if($curtime < $time) {
 
      
 
-<form method="post" action="zobacz_ankieta.php?action=add&id=<?php echo $row["id_ankieta"]; ?>">  
-        
-           <!-- <input class="button_send" type="submit" value="Głosuj" />-->
 
-        </form>  
  
 <?php include('stopka.php'); ?>
 

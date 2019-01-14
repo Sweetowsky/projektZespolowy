@@ -35,17 +35,17 @@
 		//$odpwiedz = $_POST['odpowiedz'];
         
         
-        if($data_rozpoczecia=="0000-00-00 00:00:00")
-        {
+        //if($data_rozpoczecia=="0000-00-00 00:00:00")
+       // {
             
             
-            echo "defaultowa data";
-echo $_POST['data_rozpoczecia'];
+          //  echo "defaultowa data";
+//echo $_POST['data_rozpoczecia'];
             
-        }
-        else 
-        {echo "dobra data";
-		echo $_POST['data_rozpoczecia'];}
+       // }
+       // else 
+        //{echo "dobra data";
+		//echo $_POST['data_rozpoczecia'];}
 		
 
 		//Zapamiętaj wprowadzone dane
@@ -60,7 +60,7 @@ echo $_POST['data_rozpoczecia'];
          
         try
         {
-             echo $data_zakonczenia ;
+            // echo $data_zakonczenia ;
           
             $polaczenie = new mysqli($host, $db_user, $db_password, $db_name);
               $polaczenie->set_charset("utf8");
@@ -84,7 +84,7 @@ echo $_POST['data_rozpoczecia'];
                     {
                         $_SESSION['udanarejestracja']=true;
                        // header('Location: ankiety.php');
-                        echo  $data_zakonczenia ;
+                        //echo  $data_zakonczenia ;
                        // echo  $opcjaA;
                        // echo $_POST['name']['0'];
                         //echo $_POST['name']['1'];
